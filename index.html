@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Le film de Réouven">
+<meta property="og:description" content="Le devis du film et du site de l'événement.">
+<meta property="og:url" content="https://davidbenittah.github.io/devis-reouven/">
+<meta property="og:image" content="https://davidbenittah.github.io/devis-reouven/apercu.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<title>Devis film Réouven</title>
+<style>
+:root {
+  /* Charte DB 10/10 en page : blanc, lueurs ambrées qui dérivent, Helvetica Neue Bold serrée, vrai Db aux couleurs qui coulent ; chaque scène est un titre en minuscules avec point qui s'allume en ambre quand on la lit */
+  --white: #FFFFFF;
+  --text: #1C1B19;
+  --muted: #5C5750;
+  --ink: #9A681E;
+  --line: rgba(28, 27, 25, .09);
+  --glass: rgba(255, 255, 255, .7);
+  --glass-edge: rgba(255, 255, 255, .92);
+  --unlit: #CFC7BA;
+  --glow-amber: #F0C052;
+  --glow-peach: #F5A773;
+  --glow-mint: #B3D9D4;
+  --glow-rose: #F2B8C6;
+  --flow: linear-gradient(120deg, #9A681E 0%, #C46A2E 24%, #B9506C 48%, #D79A2B 72%, #9A681E 100%);
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --db-mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSI1Ny4xIDYzLjkgNDg2LjEgNDg2LjEiPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLDYwMC4wMDAwMDApIHNjYWxlKDAuMDI5Mjk3LC0wLjAyOTI5NykiIGZpbGw9IiMwMDAiIHN0cm9rZT0ibm9uZSI+CiAgICA8cGF0aCBkPSJNMTQ3MTAgMTY0MzAgYy0zMTcgLTY3IC01NjAgLTIzNSAtODE4IC01NjcgLTE2MiAtMjA4IC0zNzMgLTYxNAotNTEwIC05ODMgLTU5IC0xNjEgLTExMiAtMzEzIC0xMjcgLTM2NSAtNyAtMjcgLTE5IC02MyAtMjUgLTgwIC03IC0xNiAtMTYKLTQzIC0yMCAtNjAgLTEwMSAtMzc2IC0xNTkgLTYwMCAtMTU1IC02MDMgMiAtMiAtMyAtMjAgLTExIC0zOSAtOSAtMTkgLTEzCi0zOCAtMTAgLTQwIDMgLTMgMSAtMTQgLTQgLTIzIC01IC0xMCAtMTIgLTMzIC0xNCAtNTEgLTMgLTE5IC0xMCAtNTIgLTE2IC03NAotNiAtMjIgLTEzIC01MyAtMTYgLTcwIC0zIC0xNiAtMTAgLTQ4IC0xNSAtNzAgLTUgLTIyIC0xMiAtNTMgLTE0IC03MCAtMTIKLTc4IC0xNSAtOTUgLTM1IC0xODAgLTE5IC04MSAtMjAgLTg4IC0yNSAtMTMwIC0yIC0yMiAtOSAtNjUgLTE1IC05NSAtNiAtMzAKLTEzIC03NSAtMTUgLTEwMCAtMyAtMjUgLTcgLTU2IC0xMCAtNzAgLTIwIC0xMDMgLTI1IC0xMzAgLTI5IC0xNjUgLTMgLTIyIC01Ci00MCAtNiAtNDAgLTEgMCAtMyAtMTMgLTUgLTMwIC0zIC0yNSAtMTQgLTgzIC0yMCAtMTA1IC01IC0yMiAtMTcgLTEwOSAtMjAKLTE1NSAtMyAtMzEgLTcgLTYwIC0xMCAtNjUgLTIgLTQgLTcgLTI5IC0xMCAtNTYgLTMgLTI3IC04IC02MCAtMTAgLTc0IC0yCi0xNCAtNyAtNTQgLTEwIC05MCAtMyAtMzYgLTcgLTc4IC05IC05NSAtMiAtMTYgLTcgLTU5IC0xMSAtOTUgLTQgLTM2IC05IC02OAotMTEgLTcxIC0yIC0zIC02IC0zMyAtOSAtNjUgLTYgLTYxIC0xNSAtMTM0IC0yMCAtMTY5IC03IC00NSAtMjYgLTc2IC02MgotMTAwIC0yMSAtMTQgLTU0IC0zNiAtNzMgLTUwIC02MiAtNDQgLTEwMyAtNzMgLTIyMSAtMTU3IC02NCAtNDYgLTE2NSAtMTE4Ci0yMjQgLTE2MiAtNTkgLTQzIC0xMTQgLTc5IC0xMjIgLTgwIC0xNyAtMSAtMjAgMTAgLTI3IDExOSAtNiA5NCAtMTcgMTg4IC0yMgoxOTYgLTIgNCAtNyAzNSAtMTAgNzAgLTUgNTUgLTIyIDE1MyAtMzggMjI0IC0zNiAxNjIgLTYwIDI1OCAtNzIgMjk1IC04IDI1Ci0yNiA4OCAtNDAgMTQwIC0yNiA5NyAtMTM2IDM5NyAtMTg0IDUwNSAtMTUgMzMgLTMzIDc2IC00MCA5NSAtMTkgNTAgLTE0NgozMDIgLTE5NCAzODUgLTIzIDM5IC01MCA4NiAtNjAgMTA1IC01MSA5NSAtMTk5IDMwOSAtMzE2IDQ1NyAtMTkgMjUgLTQ2IDYwCi02MCA3OCAtMTAyIDEzNCAtMzI2IDM2NCAtNTAwIDUxNSAtOTIgNzkgLTM2NCAyODcgLTQyNSAzMjUgLTE2IDEwIC01MiAzMwotODAgNTAgLTI3IDE4IC01NyAzNSAtNjUgMzkgLTggMyAtMzcgMjAgLTY1IDM2IC00NyAyOCAtNzEgNDIgLTIxNSAxMjEgLTY3CjM2IC0yODUgMTMxIC0zOTUgMTcyIC0xNTggNTggLTQ2MiAxNTIgLTU0MCAxNjYgLTI3IDUgLTYzIDE0IC03OCAyMCAtMjQgOQotODkgMjQgLTIwMiA0NyAtMjAgNCAtNzMgMTEgLTEzNSAxOCAtMTkgMiAtNTMgOCAtNzUgMTQgLTUxIDEzIC0xNTUgMjUgLTMxNQozNyAtNDEgMyAtMTExIDggLTE1NSAxMSAtMjMyIDE5IC04MjMgNiAtMTAyNSAtMjEgLTE5IC0zIC01NyAtOCAtODUgLTEwIC05NgotMTEgLTEzMCAtMTUgLTE0NSAtMjAgLTE1IC01IC0yMiAtNiAtMTc1IC0yNSAtNDkgLTYgLTExMCAtMTUgLTEzNSAtMjAgLTI1Ci02IC02MSAtMTIgLTgwIC0xNSAtMzQgLTQgLTE1OCAtMjggLTIxMCAtMzkgLTE0IC00IC05MCAtMjIgLTE3MCAtNDIgLTgwIC0xOQotMTcxIC00MiAtMjA0IC00OSAtMzIgLTggLTcwIC0xOCAtODUgLTIzIC0xNCAtNiAtNjIgLTIwIC0xMDYgLTMyIC00NzAgLTEyOQotOTU4IC0zMjUgLTEzMzAgLTUzNSAtNjYgLTM3IC0xMjkgLTczIC0xNDAgLTc5IC0xMSAtNiAtNTYgLTM2IC0xMDAgLTY2IC00NAotMzAgLTg3IC01OSAtOTYgLTY1IC0xMzMgLTg0IC0zOTggLTMyOSAtNDgxIC00NDYgLTEwIC0xMyAtMzcgLTUxIC02MSAtODQKLTE0OSAtMjA4IC0yMjYgLTM5NSAtMjYzIC02NDUgLTYgLTQwIC02IC0yMzIgMSAtMjYwIDMgLTE0IDggLTM4IDEwIC01NCAxMQotNjAgNzcgLTIxMSAxMTkgLTI3NSA2MSAtOTIgMTU4IC0xOTUgMjI1IC0yNDAgNzYgLTUxIDE4MSAtOTEgMjM4IC05MSA4MyAwCjE0NSA2OSAxNDUgMTYwIDAgNTMgLTE0IDg2IC04OCAyMTMgLTI5IDQ4IC01OCAxMTAgLTY0IDEzOCAtMjAgODAgLTE5IDIwNSAyCjI4OSAxNyA3MCA4MiAyMjMgMTE5IDI4MCA5IDE0IDI5IDQ1IDQ1IDcwIDMzIDUxIDI0MCAyNjIgMjk5IDMwNSAyMiAxNiA0OSAzOAo2MCA0OCAxMSAxMCAzNiAyOCA1NSA0MCAxOSAxMiA0NCAyOSA1NCAzOSAxMSAxMCAyNiAxOCAzMyAxOCA3IDAgMTMgNSAxMyAxMAowIDYgNCAxMCAxMCAxMCA1IDAgNDIgMjEgODIgNDcgMTMwIDg0IDQxNCAyMjggNTY4IDI4OCA0NyAxOCAxNDggNTggMjI1IDg4Cjc3IDMwIDE1NiA1OSAxNzUgNjUgMTkgNSA5NCAyOCAxNjUgNTAgMjAzIDYzIDMyOCAxMDAgMzU1IDEwNiAxNCAyIDYxIDE0IDEwNQoyNCAyNjkgNjcgNjAzIDEzMSA3NjAgMTQ3IDMzIDMgNzEgOCA4NSAxMCAxNCAyIDYzIDcgMTEwIDEwIDQ3IDQgMTAxIDkgMTIwCjEyIDczIDkgNjMwIDExIDczNSAzIDE5MCAtMTUgMjE5IC0xOCA0MTAgLTQwIDIxNCAtMjUgNDg1IC04OCA2OTAgLTE2MCAyNTQKLTkwIDI3OSAtMTAwIDQyNSAtMTczIDE0MSAtNzEgMTk0IC0xMDAgMTk4IC0xMDkgMiAtNSA4IC04IDEzIC04IDUgMCA0MiAtMjEKODIgLTQ3IDE3OCAtMTE0IDMwMiAtMjAyIDM0NSAtMjQzIDggLTggNDAgLTM1IDcyIC02MCA2OCAtNTUgMjg5IC0yODEgMzk1Ci00MDUgMTI3IC0xNDggMjUyIC0zMjAgMzcxIC01MTAgNTIgLTgzIDIxMyAtMzgxIDI1NSAtNDcyIDIxIC00NiA0NSAtOTkgNTMKLTExNiA1OCAtMTI1IDEzOSAtMzQ5IDE5MSAtNTIyIDc1IC0yNTUgOTIgLTMzMCAxMzEgLTU5NSAzIC0xOSA3IC00NyAxMCAtNjEKNCAtMjUgOCAtNzIgMTkgLTE4NCA5IC0xMDIgNyAtMzkzIC00IC00MTMgLTYgLTExIC00MSAtNDIgLTc4IC02OCAtMjE5IC0xNTMKLTYxOCAtNDI3IC04ODMgLTYwNiAtMTY4IC0xMTQgLTM1OSAtMjQ0IC00MjUgLTI4OSAtNjYgLTQ1IC0yMDkgLTE0MiAtMzE5Ci0yMTYgLTEwOSAtNzQgLTIxMCAtMTQyIC0yMjUgLTE1MiAtNTEgLTM1IC0zNTQgLTIzNyAtNDM3IC0yOTEgLTk2IC02MyAtMjg0Ci0xOTEgLTI5OSAtMjAzIC01IC01IC0yOSAtMjEgLTUxIC0zNSAtNzQgLTQ4IC0yOTcgLTIwMSAtMzU5IC0yNDcgLTMzIC0yNAotMTA1IC03NCAtMTYwIC0xMTIgLTEyMCAtODIgLTMwOCAtMjE1IC0zMTUgLTIyNCAtMyAtMyAtNTAgLTM4IC0xMDUgLTc3IC01NQotNDAgLTEwNCAtNzUgLTExMCAtODAgLTUgLTQgLTMyIC0yMyAtNjAgLTQyIC00NyAtMzIgLTIyNCAtMTY4IC0yMzUgLTE4MCAtOQotMTAgLTEwOCAtODAgLTExMyAtODAgLTggMCAzIDExNSAxOCAyMDAgOCA0MyAxOCAxMTQgMjAgMTUwIDIgMTkgNCAzNSA1IDM1IDEKMCAzIDIxIDUgNDggMiAyNiA3IDUyIDEwIDU3IDMgNSA4IDI5IDExIDUyIDEwIDkyIDEzIDExMyAxNCAxMTMgMSAwIDQgMTYgNgozNSA4IDY2IDM0IDI0NSAzOSAyNzAgMyAxNCA3IDQyIDEwIDY0IDMgMjEgNyA1MCA5IDY1IDMgMTQgOCA0NiAxMSA3MSAzIDI1IDgKNTkgMTEgNzUgMTAgNTkgMTMgODEgMTkgMTI1IDExIDcwIDEyIDgyIDE5IDEzNSA0IDI4IDkgNjEgMTIgNzUgMTAgNDUgMTQgNjQKMTkgMTA1IDQgMjIgOCA0OSA5IDYwIDIgMTEgNyA0OSAxMSA4NSA4IDcwIDEyIDk1IDE2IDk1IDEgMCAzIDkgNCAyMCAyIDExIDYKNDMgMTAgNzAgNCAyOCA5IDY2IDEwIDg1IDIgMTkgNCAzNSA1IDM1IDEgMCAzIDkgNSAyMCAxIDExIDYgNDMgMTAgNzAgNCAyOCA5CjY2IDEwIDg1IDIgMTkgNCAzNSA1IDM1IDMgMCA4IDM0IDE0IDk1IDMgMzQgOCA2NSAxMSA2OSAyIDQgNyAzMCAxMCA1NyA0IDI3CjEzIDkyIDIxIDE0NCA4IDUyIDE3IDExMyAxOSAxMzUgNiA1NiAxMyAxMDEgMjAgMTM2IDQgMTcgOCA0MCAxMCA1MiA0IDI5IDE1CjExNCAyMCAxNTcgMiAxOSA0IDM1IDUgMzUgMiAwIDkgMzUgMTYgODUgMyAyNSA4IDUyIDkgNjEgMiA5IDYgNDAgMTAgNjkgNCAyOQo4IDYyIDExIDczIDIgMTAgNiA0NSAxMCA3NiAzIDMxIDggNjUgMTAgNzUgMiAxMSA4IDU0IDE0IDk2IDYgNDIgMTIgODYgMTQgOTcKMyAxMSA3IDQ0IDExIDczIDQgMjkgOCA2MCAxMCA2OSAxIDkgNiA0MSA5IDcyIDQgMzEgOCA2NSAxMCA3NSAyIDExIDcgNDQgMTAKNzUgNCAzMSA4IDY2IDEwIDc2IDMgMTEgNyA0NCAxMSA3MyA0IDI5IDggNjEgMTAgNzAgMiA5IDYgNDEgMTAgNzEgMyAzMCA4IDY1CjEwIDc5IDIgMTQgNiA0MyA5IDY1IDMgMjIgOCA1OCAxMSA4MSAzIDIzIDggNjEgMTAgODUgOCA3NCAxNiAxNDMgMjAgMTY5IDIKMTQgNiA1MiA5IDg1IDEwIDk3IDE1IDE0NiAyMSAxOTUgMiAyNSA3IDcyIDEwIDEwNSAzIDMzIDggODMgMTIgMTEwIDM0IDI0OAotMzYgNDE1IC0yMTAgNDk5IC00MCAyMCAtODggMzcgLTEwNyA0MCAtMTkgMiAtMzYgNSAtMzcgNiAtMiAxIC0yMCAyIC00MSAyCi0xNDIgMyAtMjk1IC04NyAtMzY2IC0yMTUgLTM3IC02NiAtNTEgLTExNCAtNjEgLTIxMiAtOSAtODYgLTE2IC0xMzkgLTIwCi0xNDUgLTIgLTMgLTYgLTI0IC05IC00NiAtNCAtMjIgLTggLTQ5IC0xMCAtNTkgLTIgLTExIC03IC00MiAtMTAgLTcwIC0xMQotODMgLTE3IC0xMjkgLTIxIC0xNTUgLTMgLTE0IC03IC00NyAtMTAgLTc1IC0zIC0yNyAtOCAtNjEgLTEwIC03NSAtMiAtMTQgLTcKLTQ1IC0xMCAtNzAgLTggLTU1IC0xMiAtODMgLTIwIC0xMzUgLTggLTU1IC0xNCAtMTAwIC0yMCAtMTY1IC0zIC0zMCAtOCAtNjYKLTEwIC04MCAtMTEgLTYxIC0yNyAtMTc4IC0zMSAtMjMwIC0xIC0xOSAtMyAtMzUgLTQgLTM1IC0xIDAgLTMgLTkgLTQgLTIwIC0yCi0xMSAtNiAtNDQgLTEwIC03NCAtNCAtMzAgLTkgLTYyIC0xMSAtNzEgLTIgLTkgLTYgLTQxIC0xMCAtNzEgLTExIC04OSAtMTMKLTEwMyAtMTkgLTEzNCAtMyAtMTYgLTggLTUwIC0xMSAtNzUgLTMgLTI1IC04IC01NiAtMTAgLTcwIC0yIC0xNCAtNyAtNDUgLTEwCi03MCAtMyAtMjUgLTggLTU2IC0xMCAtNzAgLTIgLTE0IC03IC00NSAtMTAgLTcwIC0zIC0yNSAtOCAtNTYgLTEwIC03MCAtMgotMTQgLTcgLTQ1IC0xMCAtNzAgLTMgLTI1IC04IC01NiAtMTAgLTcwIC0yIC0xNCAtNyAtNTAgLTEwIC04MCAtNyAtNTIgLTkKLTY4IC0yMCAtMTUwIC0zIC0xOSAtNyAtNDYgLTEwIC02MCAtMyAtMTQgLTggLTUyIC0xMSAtODUgLTggLTg0IC0xMiAtMTIwCi0xNCAtMTIwIC0yIDAgLTggLTM4IC0xNCAtOTUgLTMgLTI1IC0xMCAtNzQgLTE2IC0xMTAgLTUgLTM2IC0xMiAtODUgLTE1Ci0xMTAgLTMgLTI1IC04IC01NiAtMTEgLTcwIC02IC0yNyAtMTYgLTEwNiAtMTYgLTEzMCAwIC04IC00IC00MiAtMTAgLTc1IC0xMQotNjUgLTEyIC03MiAtMjMgLTE1NSAtMyAtMzAgLTggLTY2IC0xMCAtODAgLTIgLTE0IC03IC00OCAtMTAgLTc2IC0zIC0yOCAtNwotNjAgLTkgLTcxIC0zIC0xMSAtNyAtNDQgLTExIC03NCAtOCAtNjEgLTEwIC03NCAtMjAgLTE0NCAtNCAtMjcgLTkgLTU4IC0xMQotNjkgLTIgLTEwIC02IC00NCAtOSAtNzUgLTMgLTMxIC04IC02NiAtMTAgLTc4IC0zIC0xMiAtOCAtNDEgLTExIC02NSAtMyAtMjQKLTcgLTUyIC05IC02MyAtNyAtNDUgLTE1IC0xMTMgLTIwIC0xNjkgLTMgLTMyIC03IC02MiAtOSAtNjUgLTYgLTkgLTI1IC0xNDMKLTMxIC0yMTEgLTIgLTE5IC00IC0zNSAtNSAtMzUgLTIgMCAtMTcgLTk4IC0yNSAtMTc1IC02IC01MiAtOCAtNjggLTIxIC0xMzAKLTEzIC02MyAtMTUgLTc5IC0xOSAtMTMzIC0zIC0zMyAtNyAtNjIgLTkgLTY2IC0zIC00IC03IC0yNyAtMTAgLTUyIC0xMCAtNzcKLTI0IC0xNzYgLTMxIC0yMTkgLTIgLTE0IC03IC00NSAtMTAgLTcwIC0xMiAtMTAwIC0xNyAtMTM2IC0yMCAtMTYwIC0yIC0xNAotNyAtNDcgLTExIC03NSAtMyAtMjcgLTggLTU3IC05IC02NiAtNiAtMzAgLTE3IC0xMjQgLTIwIC0xNjkgLTIgLTI1IC01IC00NQotNiAtNDUgLTEgMCAtMyAtMTggLTUgLTQwIC0xIC0yMiAtMyAtNDAgLTQgLTQwIC0yIDAgLTcgLTI3IC0xNSAtODUgLTMgLTI1Ci04IC01NCAtMTAgLTY1IC0yIC0xMSAtNCAtMzEgLTQgLTQ0IC0xIC0xNiAtMzAgLTUyIC04OCAtMTExIC0xMjkgLTEyNyAtMjkwCi0yOTYgLTM1NSAtMzcwIC0zMSAtMzYgLTY4IC03OCAtODIgLTkzIC0yMDMgLTIxOSAtNDc2IC02NzkgLTU1OSAtOTQzIC02MwotMjAxIC03MiAtMjU3IC03MSAtNDU5IDAgLTE2MSA3IC0yMDYgNTEgLTMzNCAyNiAtNzcgNzIgLTE3MSAxMTUgLTIzNSA1OSAtODYKMjIxIC0yNDUgMjk4IC0yOTEgMzYgLTIxIDcyIC00MyA4MCAtNTAgMzQgLTI2IDIwOCAtOTggMzEzIC0xMzAgMjEyIC02NCA1MTYKLTg4IDc5NyAtNjUgNjkgNiAxNTkgMTMgMjAwIDE2IDEyNyA5IDIzNCAzMSA0OTUgMTAzIDIzOCA2NiA0MDAgMTIxIDU3MCAxOTMKMTM4IDU5IDUyOCAyNTAgNTUzIDI3MCA3IDYgMjYgMTggNDIgMjcgMTYgOSA3OCA0NiAxMzYgODQgNTggMzcgMTA5IDY3IDExNAo2NyA1IDAgMTAgNCAxMiA4IDIgNSA1NyA0NSAxMjMgODkgNjYgNDQgMTM3IDkxIDE1NyAxMDUgNDMgMjkgMjcwIDIwNiAzMDkKMjQwIDE1IDEzIDQ1IDM5IDY4IDU4IDIzIDE5IDUzIDQ0IDY1IDU1IDEzIDExIDUwIDQzIDgyIDcwIDE4MSAxNTUgNDIzIDM5Nwo1OTkgNTk5IDI4IDMyIDU5IDY4IDcwIDgwIDYzIDcyIDE3MCAxOTggMTk1IDIzMiAxNCAxOCA3MiA5NSAxMzAgMTcxIDk4IDEyOQoyNjYgMzc1IDMzNSA0ODggMTIxIDIwMiAxMzkgMjMyIDE3MyAyOTUgMTMgMjUgMjggNTAgMzIgNTUgNCA2IDU2IDEwMyAxMTUKMjE4IDE1NCAzMDEgMzMwIDcxOCA0NDYgMTA1NCA4MCAyMzUgMTk1IDY1MCAyMzkgODU4IDcgMzMgMTYgNzQgMjEgOTAgNCAxNwoxMSA1MCAxNCA3NSAzIDI1IDEwIDYxIDE1IDgwIDUgMTkgMTEgNTMgMTUgNzUgMyAyMyA3IDUyIDEwIDY1IDUgMjUgMTAgNjIgMjAKMTM4IDMgMjMgNyA1OSAxMCA4MCA3IDU4IDEzIDExMSAyMSAxODcgMyAzOSA4IDg0IDEwIDEwMCAzIDMxIDEzIDE2MiAxOSAyNTAKMiAyOCA0IDgwIDUgMTE2IGwwIDY1IDgzIDU5IGM0NSAzMyAxODAgMTMwIDMwMCAyMTcgMTIwIDg3IDIyMCAxNTggMjIzIDE1OCAzCjAgMyAtMjggLTEgLTYyIC04IC04MyAtMTMgLTEzOCAtMjAgLTIyOCAtMyAtNDEgLTggLTk1IC0xMCAtMTIwIC01IC01NCAtMTMKLTE3NSAtMjAgLTI4NSAtMyAtNDQgLTcgLTExNCAtMTAgLTE1NSAtOSAtMTQyIC0xNCAtMjM1IC0yMCAtMzkwIC0zIC04NSAtOAotMjA0IC0xMCAtMjY1IC0yNyAtNjM3IC0yNyAtMTU2NCAtMSAtMjEzNSAxNiAtMzQ0IDIyIC00NDEgMzEgLTU1MCAzIC0zMCA3Ci05MSAxMCAtMTM1IDcgLTEwNSAyMCAtMjc1IDMwIC0zNzUgNiAtNjIgMTUgLTE3MyAyMCAtMjUwIDEzIC0yMDcgMTc4IC0zNzcKMzk3IC00MTEgMjA5IC0zMiAzODggNjIgNDgzIDI1NCAyMCA0MCAzNyA4NiAzOSAxMDQgMyAxOCA3IDM2IDEwIDQxIDUgOSAxMQozNCAyNiAxMjcgOSA1NyAxMyA3NiAyNSAxMzUgMiAxNCA3IDQxIDExIDYwIDE3IDEwMiA5MyA0ODIgMTA5IDU1MCAzIDE0IDEyCjU0IDE5IDkwIDMxIDE0NSA0NyAyMTggNjEgMjc1IDggMzMgMzYgMTQ2IDYxIDI1MCAxMzEgNTQzIDMyMyAxMTQ2IDQ2NCAxNDYwCjI5IDY1IDE1NSAzMTYgMTc4IDM1NCA2MCAxMDIgODMgMTM2IDE0OCAyMjQgODggMTIxIDIzNiAyNzQgMzE0IDMyNyAzMyAyMiA2Mwo0MCA2NyA0MCA1IDAgMjAgOCAzMyAxNyAyNSAxOCAxMDcgNTUgMTY1IDc1IDE1MyA1MiAzOTYgNjIgNTU3IDIzIDIxNSAtNTEKNDAzIC0xNjAgNTY0IC0zMjcgMjM4IC0yNDYgMzcwIC00NjUgNDc5IC03OTIgNDMgLTEyOCA3OCAtMjcxIDkxIC0zNzEgMyAtMjcKOCAtNjEgMTAgLTc1IDUgLTM4IDUgLTQwMCAtMSAtNDQwIC0yIC0xOSAtNyAtNTUgLTEwIC04MCAtMzMgLTI1MiAtMTUwIC02MDEKLTI4NSAtODU1IC0yMTAgLTM5NSAtNTc1IC04MTkgLTk4NyAtMTE0OSAtMTA3IC04NyAtMjcxIC0xOTkgLTQzNSAtMjk5IC03OAotNDggLTMwMyAtMTU4IC0zNzMgLTE4MiAtNDQgLTE2IC0xMTggLTQ0IC0xNjUgLTYyIC04NyAtMzQgLTM2NyAtMTA4IC00NDkKLTExOSAtMjUgLTMgLTU3IC03IC03MSAtMTAgLTE3MSAtMjggLTYwNyAtMjIgLTc4OCAxMSAtMzIzIDU5IC01MjUgMTMzIC03MjcKMjY3IC0xNTEgMTAwIC0yNjQgMjA0IC0zMjggMzAzIC0xMDEgMTUzIC0xMjEgMTcxIC0xMzMgMTE3IC0zIC0xNSAtOCAtMzMgLTEwCi00MSAtMjQgLTc2IC0yMCAtMjY0IDcgLTM0OSA2MyAtMTk2IDEyOCAtMzAxIDI3MCAtNDM3IDIwMCAtMTkyIDQwOCAtMzA0IDczOQotMzk4IDc1IC0yMiAyMzMgLTU0IDMwMCAtNjIgMzAgLTQgNjcgLTkgODMgLTExIDE1NCAtMjQgNTQ1IC0yNyA3MzIgLTQgNTAgNgoxMDggMTMgMTMwIDE1IDQ3IDYgNDcgNiAyMDAgNDAgNjYgMTUgMTM4IDMxIDE2MCAzNSAxOTkgNDEgNDY1IDE0MCA3MjQgMjY4CjIxOSAxMDkgMzIyIDE2OCA0ODYgMjc3IDEyOSA4NiAyMzUgMTY2IDQyNiAzMjAgMTEwIDg5IDM3OSAzNjIgNTAyIDUxMCAxMDcKMTI4IDIzNSAzMDIgMjk1IDQwMCAxMzIgMjE1IDIwMSAzNDggMzA2IDU5MiA1NiAxMjkgMTQ4IDQzNiAxNzEgNTY4IDIgMTcgOQo1NSAxNCA4NSAxMCA1NyAxNSA5MyAyOCAyMjggMTQgMTQxIDkgNDE1IC0xMSA1NjIgLTIgMTQgLTcgNDggLTEwIDc1IC0zIDI4Ci04IDYxIC0xMCA3NSAtMyAxNCAtNyAzNiAtMTAgNTAgLTM0IDE4NyAtMTA5IDQyNyAtMTk2IDYyOCAtMTM3IDMxNCAtMzY5IDYyOQotNjI1IDg0OSAtMjY1IDIyNyAtNTIyIDM2MyAtODI1IDQzNiAtMTUwIDM2IC0xNjQgMzggLTM4MCA0MiAtMjY3IDUgLTQzMCAtMjMKLTY1NCAtMTExIC0yNTEgLTk5IC00NDMgLTIzMCAtNjQ2IC00NDAgLTI2OSAtMjc5IC00NjIgLTU4MyAtNjgzIC0xMDc5IC04MwotMTg2IC0yNzAgLTcxMiAtMjk4IC04MzcgLTcgLTMyIC0xNSAtNTggLTE4IC01OCAtMTQgMCA0IDc3NCAzNCAxNDUwIDEwIDIxNAoyNyA0OTUgNDAgNjcwIDkgMTIxIDE0IDE4NSAyMCAyNzUgNCA1MCA4IDEwNiAxMCAxMjUgMiAxOSA2IDcxIDEwIDExNiAzIDQ0IDgKMTAxIDEwIDEyNSAzIDI0IDcgNzMgMTAgMTA5IDkgMTI0IDE0IDE3NiAyNSAyNjUgNiA1MCAxMyAxMTAgMTUgMTM1IDIgMjUgNAo0NSA1IDQ1IDIgMCA0IDExIDUgMjUgNiA1NyAxNyAxNDEgMjAgMTU4IDIgOSA0IDIwIDQgMjQgMSAxMCA0MCA0OCA4MSA3OCAxOAoxNCA0MCAzMiA1MCA0MCAxMCA4IDMyIDI2IDUwIDQwIDE4IDE0IDM4IDMwIDQ0IDM1IDE0IDEzIDEzMiAxMTEgMTgwIDE1MCAyMQoxNyA0NyAzOCA1OSA0OCAxMiAxMCAzNyAzMSA1NiA0NSAxOSAxNSA0NiAzNyA1OSA1MCAxNCAxMyA0MSAzNSA2MSA1MCAzMiAyNQo5MCA3MyAxMTcgOTcgNzAgNjEgMTMxIDExMyAxNDggMTI0IDEyIDggMjYgMTkgMzEgMjUgNiA2IDMzIDI5IDYwIDUxIDE0MyAxMTMKNTAzIDQ0MyA3MjAgNjYwIDI3NCAyNzMgNDU0IDQ5MCA1OTQgNzEzIDM5IDYyIDcxIDExNSA3MSAxMTcgMCAyIDEzIDI2IDI4IDUyCjcwIDEyMCAxNjYgMzg3IDE5OCA1NTMgNDUgMjM1IDUwIDM3OSAyMCA2MDAgLTIgMTQgLTcgNTAgLTExIDgwIC0xNSAxMTggLTg3CjM1OCAtMTUxIDUwNiAtMTEyIDI1OSAtMjg3IDQ4MyAtNDc3IDYxMCAtMTMzIDg5IC0zNTYgMTg1IC00NjMgMTk5IC0yMiAzIC01MAo3IC02NCAxMSAtNjYgMTQgLTIxOCAxMiAtMzAwIC02eiBtMzY1IC01NjAgYzExNSAtMjYgMjA5IC05NSAzMjMgLTIzOCAxMjcKLTE2MCAxOTcgLTMxNSAyNDUgLTU0NSA1NCAtMjU1IDIzIC01MDkgLTk5IC04MTkgLTEzNyAtMzQ5IC0zOTYgLTcwNSAtNzkwCi0xMDg4IC0yMDkgLTIwMyAtMzY1IC0zNTAgLTQxMyAtMzg4IC0yNSAtMjAgLTU1IC00NiAtNjYgLTU3IC0xMSAtMTEgLTQyIC0zOAotNjkgLTYwIC0yOCAtMjIgLTYxIC01MSAtNzUgLTY0IC0xNCAtMTMgLTQyIC0zNSAtNjEgLTUwIC0xOSAtMTQgLTQxIC0zMyAtNTAKLTQxIC05IC04IC0zMSAtMjYgLTUwIC00MCAtMTggLTE0IC00NCAtMzQgLTU2IC00NSAtMTIgLTEyIC0zNyAtMzIgLTU1IC00NQotNDMgLTMzIC05MyAtNzMgLTk5IC04MSAtMTUgLTE4IC0xMzQgLTk4IC0xNDAgLTk0IC02IDQgLTYgNzAgMCA3MCAxIDAgMyAxNgo1IDM1IDEgMTkgMyAzNSA0IDM1IDMgMCAzIDEgMTYgMTA1IDEyIDkzIDIxIDE2OCAzMSAyNDAgMyAxOSA3IDU5IDkgODkgMyAzMAo3IDYxIDEwIDcwIDMgOSA3IDQyIDEwIDczIDIgMzEgMTIgOTAgMjAgMTMwIDkgNDAgMTggODkgMjEgMTA4IDIgMTkgOCA1NSAxNAo4MCA1IDI1IDEyIDU5IDE0IDc1IDMgMTcgMTAgNDggMTYgNzAgNSAyMiAxNyA3NCAyNSAxMTUgOSA0MSAyMiAxMDIgMzAgMTM1IDgKMzMgMTYgNzQgMTkgOTAgNSAyOSA3OCAzMTEgOTYgMzcwIDUgMTcgMTUgNTMgMjMgODAgNDYgMTU1IDg5IDI4MCAxNTkgNDcwIDgKMjIgMjkgNzggNDYgMTI1IDYxIDE3MiAyMDYgNDg2IDI4NSA2MjAgMTQ0IDI0NiAyOTcgNDExIDQyMiA0NTkgNTYgMjEgMTE3IDI1CjE4MCAxMXogbS0zOTM5IC02MTY3IGMtMTEgLTgyIC0xNyAtMTI3IC0yMiAtMTU1IC0yIC0xNiAtNiAtNDMgLTkgLTYwIC0zIC0xOAotNyAtNDQgLTEwIC01OCAtMyAtMTQgLTcgLTQxIC0xMCAtNjAgLTE2IC05NiAtNjggLTM0MSAtMTAwIC00NjUgLTIwNCAtNzk0Ci01NTcgLTE2MDMgLTk4MSAtMjI1MiAtMTIwIC0xODMgLTMyMSAtNDY4IC0zODggLTU0OSAtMjggLTMzIC02NCAtNzggLTgxIC05OAotMjggLTM2IC03NSAtOTEgLTEyMCAtMTQwIC0xMSAtMTMgLTQ3IC01NCAtODAgLTkxIC03MCAtODEgLTY4IC03OSAtMjUxIC0yNTUKLTE0NyAtMTQxIC0xNzIgLTE2MyAtMzQ0IC0zMDcgLTU4IC00OCAtMTA3IC05MCAtMTEwIC05MyAtMTggLTE5IC0yODIgLTIwOQotMzI4IC0yMzUgLTkgLTUgLTY0IC00MiAtMTIyIC04MCAtMTA0IC03MCAtMTY4IC0xMDkgLTMyNSAtMTk3IC0xNDggLTg0IC0yMTYKLTExOCAtMjMwIC0xMTggLTggMCAtMTUgLTQgLTE1IC05IDAgLTUgLTggLTExIC0xNyAtMTQgLTEwIC0zIC02NyAtMjggLTEyOAotNTUgLTI0NyAtMTEyIC02ODggLTI0OCAtODYwIC0yNjYgLTIzMSAtMjQgLTI5MiAtMjcgLTM4MCAtMjIgLTE4OSAxMiAtMjg0CjI5IC0zODMgNjcgLTI0NCA5MyAtMzQ2IDIyNyAtMzQ2IDQ1NCAtMSAxNTIgMjIgMjU2IDk5IDQ2MiA2MCAxNjEgMTA2IDI0NQoyODMgNTE4IDg0IDEyOSAxMzUgMTg0IDEyNyAxMzggLTEgLTEwIDAgLTIyIDMgLTI3IDMgLTUgNiAtMjggOCAtNTAgOCAtMTM2CjExMiAtMjY2IDI1NCAtMzE0IDgxIC0yOCAyMTUgLTIzIDI5MiAxMSAxNzIgNzYgMjQ0IDE5NyAyNTMgNDI1IDMgNjQgNyAxMzcKMTAgMTYyIDMgMjQgNyA2NSA5IDkwIDMgMjUgOCA4MSAxMSAxMjUgMyA0NCA4IDkxIDEwIDEwNSAzIDE0IDcgNDEgMTAgNjAgMwoxOSA3IDQ2IDEwIDYwIDIgMTQgNyA0MyAxMCA2NSAxNyAxMjYgMzcgMjAwIDcwIDI2MCAzNCA2MCAxOTUgMjI4IDMwMCAzMTAgMjgKMjIgNTIgNDIgNTUgNDUgMyAzIDIzIDE5IDQ1IDM1IDQ5IDM2IDY4IDUxIDExNCA5MCAyMCAxNyA1NCA0NCA3NiA2MCAyMiAxNgo0MiAzMSA0NSAzNSAzIDMgMjMgMTggNDUgMzUgMjIgMTYgNDIgMzIgNDUgMzUgMyAzIDIxIDE3IDQwIDMwIDE5IDE0IDQzIDMyCjUzIDQxIDEwIDkgNTAgMzkgODggNjYgMzggMjYgMTE1IDgyIDE3MiAxMjMgNTYgNDIgMTE4IDg1IDEzNyA5NyAxOSAxMiA0NSAzMQo1NiA0MiAxMiAxMCAxMDAgNzQgMTk1IDE0MCA5NiA2NiAyMjEgMTUzIDI3OCAxOTMgNTcgNDAgMTU0IDEwNyAyMTUgMTQ4IDYxCjQxIDEyOCA4NyAxNDcgMTAzIDIwIDE1IDM5IDI3IDQ0IDI3IDQgMCAyNCAxMyA0NCAyOSA2MiA0OCAzMzEgMjMxIDM0MCAyMzEgNQowIDExIDQgMTMgOSAyIDQgNTcgNDMgMTIzIDg2IDE4MyAxMTkgMjk3IDE5NSA3MDUgNDY5IDU4MyAzOTIgNzk5IDUzNiA4MDgKNTM2IDIgMCAxIC0yMSAtMiAtNDd6Ii8+CiAgPC9nPgo8L3N2Zz4=");
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: var(--white); }
+body { margin: 0; background: var(--white); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.5; padding-inline: 20px; padding-block: 0 72px; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+
+.sky { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.sky span { position: absolute; width: 90vmax; height: 90vmax; border-radius: 50%; will-change: transform; }
+.sky .a { left: -46vmax; top: -44vmax; opacity: .55; background: radial-gradient(closest-side, var(--glow-amber), transparent); animation: driftA 26s var(--ease-in-out) infinite alternate; }
+.sky .b { right: -54vmax; top: 22vh; opacity: .4; background: radial-gradient(closest-side, var(--glow-peach), transparent); animation: driftB 31s var(--ease-in-out) infinite alternate; }
+.sky .c { left: -44vmax; bottom: -58vmax; opacity: .55; background: radial-gradient(closest-side, var(--glow-mint), transparent); animation: driftC 28s var(--ease-in-out) infinite alternate; }
+.sky .d { right: -50vmax; bottom: -54vmax; opacity: .36; background: radial-gradient(closest-side, var(--glow-rose), transparent); animation: driftD 35s var(--ease-in-out) infinite alternate; }
+@keyframes driftA { to { transform: translate3d(9vmax, 7vmax, 0) scale(1.08); } }
+@keyframes driftB { to { transform: translate3d(-8vmax, 10vmax, 0) scale(.94); } }
+@keyframes driftC { to { transform: translate3d(10vmax, -8vmax, 0) scale(1.05); } }
+@keyframes driftD { to { transform: translate3d(-9vmax, -6vmax, 0) scale(1.1); } }
+
+.db { position: relative; display: block; aspect-ratio: 1; }
+.db i { position: absolute; inset: 0; overflow: hidden; -webkit-mask: var(--db-mask) center / contain no-repeat; mask: var(--db-mask) center / contain no-repeat; }
+.db i::before { content: ""; position: absolute; inset: -50%; background: var(--flow); animation: flow 9s var(--ease-in-out) infinite alternate; }
+@keyframes flow { from { transform: translate3d(-20%, -12%, 0) rotate(-6deg); } to { transform: translate3d(20%, 12%, 0) rotate(6deg); } }
+
+.top { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 16px; }
+.top .db { width: 36px; }
+.top .date { font-weight: 700; font-size: 13px; letter-spacing: -.01em; color: var(--muted); }
+
+.page { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; display: grid; gap: 104px; }
+.hero { display: grid; justify-items: center; text-align: center; gap: 18px; padding-block: 28px 0; }
+.hero .db { width: min(58vw, 260px); }
+h1 { margin: 0; font-weight: 700; font-size: clamp(46px, 13.5vw, 92px); line-height: .94; letter-spacing: -.055em; color: var(--ink); }
+.lm { display: block; overflow: hidden; padding: 0 .06em .1em; margin: 0 -.06em -.1em; }
+.lm > span { display: block; }
+.lede { margin: 0; font-weight: 700; font-size: 20px; letter-spacing: -.018em; color: var(--ink); }
+
+.sec { display: grid; gap: 10px; margin-bottom: 44px; }
+.sec h2 { margin: 0; font-weight: 700; font-size: clamp(44px, 12vw, 68px); line-height: .95; letter-spacing: -.055em; color: var(--ink); }
+.sec p { margin: 0; font-weight: 700; font-size: 18px; letter-spacing: -.015em; max-width: 36ch; }
+.sec .explain { font-weight: 400; letter-spacing: 0; max-width: 40ch; }
+
+ol.scenes { list-style: none; margin: 0; padding: 0; display: grid; gap: 64px; }
+.scene { display: grid; gap: 10px; }
+.tc { font-weight: 700; font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; transition: color 600ms ease; }
+.scene h3 { margin: 0; font-weight: 700; font-size: clamp(34px, 9.6vw, 56px); line-height: 1; letter-spacing: -.048em; color: var(--text); transition: color 800ms var(--ease-out); }
+.scene.lit h3, .scene.lit .tc { color: var(--ink); }
+.see { margin: 0; font-size: 18px; max-width: 36ch; }
+.vo { margin: 0; color: var(--muted); font-size: 16px; max-width: 40ch; }
+.lights { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; }
+.lights li { display: grid; justify-items: center; gap: 7px; font-weight: 700; font-size: 13px; color: var(--muted); transition: color 500ms ease; }
+.dot { width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--unlit); transition: background-color 500ms ease, border-color 500ms ease, box-shadow 800ms var(--ease-out); }
+.star { width: 24px; height: 24px; margin-top: -5px; color: var(--unlit); transition: color 500ms ease, transform 900ms var(--ease-out), filter 900ms ease; }
+.lights li:nth-child(2), .lights li:nth-child(2) .dot { transition-delay: 160ms; }
+.lights li:nth-child(3), .lights li:nth-child(3) .dot { transition-delay: 320ms; }
+.lights li:nth-child(4), .lights li:nth-child(4) .dot { transition-delay: 480ms; }
+.scene.lit .lights li { color: var(--ink); }
+.scene.lit .dot { background: var(--glow-amber); border-color: var(--glow-amber); box-shadow: 0 0 0 7px rgba(240, 192, 82, .28); }
+.scene.lit .star { color: #E0A325; transform: scale(1.3) rotate(-8deg); filter: drop-shadow(0 0 8px rgba(240, 192, 82, .85)); }
+
+.island { position: fixed; z-index: 5; top: calc(env(safe-area-inset-top, 0px) + 12px); left: 50%; display: flex; align-items: center; gap: 10px; max-width: calc(100% - 32px); padding: 8px 16px 8px 10px; border-radius: 999px; overflow: hidden; background: var(--glass); border: 1px solid var(--glass-edge); box-shadow: 0 18px 40px -24px rgba(60, 40, 10, .5); -webkit-backdrop-filter: blur(18px) saturate(1.5); backdrop-filter: blur(18px) saturate(1.5); transform: translate(-50%, -160%); opacity: 0; pointer-events: none; transition: transform 520ms var(--ease-out), opacity 240ms ease; }
+.island.show { transform: translate(-50%, 0); opacity: 1; }
+.island .db { width: 22px; flex: none; }
+.island .it { font-weight: 700; font-size: 13px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.island .in { font-weight: 700; font-size: 15px; letter-spacing: -.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; transition: opacity 180ms ease, filter 180ms ease, transform 260ms var(--ease-out); }
+.island .in.swap { opacity: 0; filter: blur(4px); transform: translateY(5px); }
+.island .bar { position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform 700ms var(--ease-out); }
+
+.photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tile { background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 16px; padding: 16px; display: grid; gap: 4px; align-content: start; min-width: 0; box-shadow: 0 12px 30px -26px rgba(60, 40, 10, .45); }
+.tile b { font-weight: 700; font-size: 22px; letter-spacing: -.035em; color: var(--ink); }
+.tile span { font-size: 15px; color: var(--muted); }
+.tile.wide { grid-column: 1 / -1; }
+
+ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.inclus li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: center; font-weight: 700; font-size: 17px; letter-spacing: -.012em; }
+.ic { width: 44px; height: 44px; border-radius: 16px; display: grid; place-items: center; color: var(--ink); background: var(--glass); border: 1px solid var(--glass-edge); box-shadow: 0 10px 24px -20px rgba(60, 40, 10, .5); }
+.ic svg { width: 22px; height: 22px; }
+
+.ledger { background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 16px; padding: 6px 22px; box-shadow: 0 24px 48px -34px rgba(60, 40, 10, .45); }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); }
+.row:first-child { border-top: 0; }
+.row .k { font-weight: 700; font-size: 18px; letter-spacing: -.015em; }
+.row .v { font-weight: 700; font-size: 40px; line-height: 1; letter-spacing: -.05em; color: var(--ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.row .d { grid-column: 1 / -1; margin: 0; font-size: 15px; color: var(--muted); max-width: 46ch; }
+.row.total .v { font-size: 64px; }
+
+.sign { display: grid; justify-items: center; gap: 12px; text-align: center; }
+.sign .db { width: 120px; }
+.sign b { font-weight: 700; font-size: 20px; letter-spacing: -.02em; color: var(--ink); }
+
+@media (min-width: 640px) {
+  .photos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .tile.wide { grid-column: span 3; }
+  ul.inclus { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .db { animation: trace 1.15s var(--ease-in-out) .2s both; }
+  .hero .lm > span { animation: up .95s var(--ease-out) both; }
+  .hero .lm:nth-child(1) > span { animation-delay: .8s; }
+  .hero .lm:nth-child(2) > span { animation-delay: .9s; }
+  .hero .lede { animation: fade .8s var(--ease-out) 1.25s both; }
+  @keyframes trace { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes up { from { transform: translateY(108%); } }
+  @keyframes fade { from { opacity: 0; transform: translateY(8px); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sky span, .db i::before { animation: none; }
+}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><span class="a"></span><span class="b"></span><span class="c"></span><span class="d"></span></div>
+
+<div class="island" id="island" aria-hidden="true">
+  <span class="db"><i></i></span><span class="it">0:00</span><span class="in">il était une fois.</span><span class="bar"></span>
+</div>
+
+<header class="top">
+  <span class="db" role="img" aria-label="DB Studio"><i></i></span>
+  <span class="date">Devis du 8 octobre 2026</span>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <span class="db" role="img" aria-label="DB Studio"><i></i></span>
+    <h1><span class="lm"><span>le film</span></span><span class="lm"><span>de Réouven.</span></span></h1>
+    <p class="lede">Pour Roland et Karine.</p>
+  </section>
+
+  <section id="film">
+    <header class="sec">
+      <h2>le film.</h2>
+      <p>Un conte d'une minute trente, de votre «&nbsp;oui&nbsp;» jusqu'à ses téfilines. Scène par scène, ce qu'on voit puis ce que dit la voix.</p>
+    </header>
+    <ol class="scenes" role="list">
+      <li class="scene" data-t="0:00" data-e="11.69">
+        <span class="tc">0:00</span>
+        <h3>il était une fois.</h3>
+        <p class="see">Comme au début des films Disney, on suit une lumière à travers Marseille, jusqu'à arriver devant une maison.</p>
+        <p class="vo">«&nbsp;Il était une fois Roland et Karine. Il y a vingt ans, ils se sont dit oui.&nbsp;»</p>
+      </li>
+      <li class="scene" data-t="0:12" data-e="26.05">
+        <span class="tc">0:12</span>
+        <h3>vos quatre filles.</h3>
+        <p class="see">Chacune apparaît d'abord en dessin, comme dans un livre de contes, puis le dessin devient sa vraie photo.</p>
+        <p class="vo">«&nbsp;Et ce oui a d'abord pris le visage de Laurie. Puis celui d'Eden, celui d'Anna, et celui de Tess. Quatre lumières sous le même toit.&nbsp;»</p>
+        <ul class="lights" aria-hidden="true"><li><span class="dot"></span>Laurie</li><li><span class="dot"></span>Eden</li><li><span class="dot"></span>Anna</li><li><span class="dot"></span>Tess</li></ul>
+      </li>
+      <li class="scene" data-t="0:26" data-e="37.74">
+        <span class="tc">0:26</span>
+        <h3>la cinquième lumière.</h3>
+        <p class="see">Les prières du Rav s'écrivent à l'écran, puis une étoile s'allume.</p>
+        <p class="vo">«&nbsp;Les années ont passé. Et un jour, portée par les prières du Rav Avraham Mimoun, une cinquième petite lumière.&nbsp;»</p>
+        <ul class="lights" aria-hidden="true"><li><svg aria-hidden="true" focusable="false" class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg>Réouven</li></ul>
+      </li>
+      <li class="scene" data-t="0:38" data-e="45.85">
+        <span class="tc">0:38</span>
+        <h3>son prénom.</h3>
+        <p class="see">Une photo de Réouven, et le sens de son prénom qui s'écrit à l'écran.</p>
+        <p class="vo">«&nbsp;Ils l'ont appelé Réouven. En hébreu, son prénom veut dire&nbsp;: “Voyez, un fils.”&nbsp;»</p>
+      </li>
+      <li class="scene" data-t="0:46" data-e="67.18">
+        <span class="tc">0:46</span>
+        <h3>il grandit.</h3>
+        <p class="see">Réouven tel qu'il est aujourd'hui, en images de cinéma.</p>
+        <p class="vo">«&nbsp;Lui découvrait le monde. Et ses parents, ses quatre sœurs, ne le quittaient pas des yeux. Treize ans ont rempli ces pages. Roland et Karine les ont gardées, une à une.&nbsp;»</p>
+      </li>
+      <li class="scene" data-t="1:07" data-e="73.61">
+        <span class="tc">1:07</span>
+        <h3>le Kotel.</h3>
+        <p class="see">Gros plan sur son bras qui porte les téfilines. La caméra recule&nbsp;: Réouven sourit, devant le Kotel.</p>
+        <p class="vo">«&nbsp;Aujourd'hui, le petit garçon de ces photos va nouer ses téfilines.&nbsp;»</p>
+      </li>
+      <li class="scene" data-t="1:14" data-e="79.35">
+        <span class="tc">1:14</span>
+        <h3>jusqu'à la fête.</h3>
+        <p class="see">Le Kotel se défait en milliers de points de lumière, qui se reforment en salle de fête, à Marseille.</p>
+        <p class="vo">«&nbsp;Certaines histoires prennent leur temps. Celle-ci les a menés jusqu'ici.&nbsp;»</p>
+      </li>
+      <li class="scene" data-t="1:19" data-e="87.35">
+        <span class="tc">1:19</span>
+        <h3>l'invitation.</h3>
+        <p class="see">L'image s'efface doucement, et l'invitation prend le relais.</p>
+        <p class="vo">«&nbsp;La suite… elle n'attend plus que vous.&nbsp;»</p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <header class="sec">
+      <h2>le faire-part.</h2>
+      <p>Un site internet conçu pour l'événement, avec le film.</p>
+      <p class="explain">Avec ce film, je conçois un site internet rien que pour la bar-mitsva de Réouven&nbsp;: un lien que chaque invité ouvre sur son téléphone. Il y retrouve le film, puis les dates, les heures et les lieux. Il y répond directement, «&nbsp;je viens&nbsp;» ou «&nbsp;je ne viens pas&nbsp;», et sa réponse s'inscrit aussitôt dans un tableau, comme sur Excel, que vous suivez en direct. Vous savez à tout moment qui vient et qui ne vient pas.</p>
+    </header>
+  </section>
+
+  <section>
+    <header class="sec">
+      <h2>les photos.</h2>
+      <p>Pour l'intelligence artificielle, il faut des portraits.</p>
+      <p class="explain">Les photos que vous m'avez déjà envoyées iraient très bien pour un montage photo classique. Mais ce film est produit avec l'intelligence artificielle, qui refait chaque personne&nbsp;: pour elle, ces photos ne sont pas utilisables. Il me faut des portraits de chaque personne qui apparaît dans le film&nbsp;: c'est ce qui me permet de reproduire chacun le plus fidèlement possible, sans pouvoir garantir que tout le monde sera identique à 100&nbsp;%.</p>
+      <p class="explain">Je les rassemble directement avec Tess ou Réouven&nbsp;: vous n'avez rien à chercher.</p>
+    </header>
+    <div class="photos">
+      <div class="tile"><b>Roland</b><span>des photos en portrait, le visage bien visible</span></div>
+      <div class="tile"><b>Karine</b><span>des photos en portrait, le visage bien visible</span></div>
+      <div class="tile"><b>Laurie</b><span>des photos en portrait, le visage bien visible</span></div>
+      <div class="tile"><b>Eden</b><span>des photos en portrait, le visage bien visible</span></div>
+      <div class="tile"><b>Anna</b><span>des photos en portrait, le visage bien visible</span></div>
+      <div class="tile"><b>Tess</b><span>des photos en portrait, le visage bien visible</span></div>
+      <div class="tile wide"><b>Réouven</b><span>une dizaine de portraits, de face et de profil, à la lumière du jour</span></div>
+      <div class="tile wide"><b>La salle</b><span>son nom, ou quelques photos</span></div>
+    </div>
+  </section>
+
+  <section>
+    <header class="sec">
+      <h2>ce qui est compris.</h2>
+    </header>
+    <ul class="inclus" role="list">
+      <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,176a48.05,48.05,0,0,0,48-48V64a48,48,0,0,0-96,0v64A48.05,48.05,0,0,0,128,176ZM96,64a32,32,0,0,1,64,0v64a32,32,0,0,1-64,0Zm40,143.6V240a8,8,0,0,1-16,0V207.6A80.11,80.11,0,0,1,48,128a8,8,0,0,1,16,0,64,64,0,0,0,128,0,8,8,0,0,1,16,0A80.11,80.11,0,0,1,136,207.6Z"/></svg></span><span>La voix qui raconte l'histoire, écrite pour votre famille</span></li>
+      <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M212.92,17.69a8,8,0,0,0-6.86-1.45l-128,32A8,8,0,0,0,72,56V166.08A36,36,0,1,0,88,196V110.25l112-28v51.83A36,36,0,1,0,216,164V24A8,8,0,0,0,212.92,17.69ZM52,216a20,20,0,1,1,20-20A20,20,0,0,1,52,216ZM88,93.75V62.25l112-28v31.5ZM180,184a20,20,0,1,1,20-20A20,20,0,0,1,180,184Z"/></svg></span><span>La musique d'orchestre, calée sur la voix</span></li>
+      <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,32a8,8,0,0,0-8-8c-44.08,0-89.31,49.71-114.43,82.63A60,60,0,0,0,32,164c0,30.88-19.54,44.73-20.47,45.37A8,8,0,0,0,16,224H92a60,60,0,0,0,57.37-77.57C182.3,121.31,232,76.08,232,32ZM92,208H34.63C41.38,198.41,48,183.92,48,164a44,44,0,1,1,44,44Zm32.42-94.45q5.14-6.66,10.09-12.55A76.23,76.23,0,0,1,155,121.49q-5.9,4.94-12.55,10.09A60.54,60.54,0,0,0,124.42,113.55Zm42.7-2.68a92.57,92.57,0,0,0-22-22c31.78-34.53,55.75-45,69.9-47.91C212.17,55.12,201.65,79.09,167.12,110.87Z"/></svg></span><span>Les dessins de la famille, animés</span></li>
+      <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM40,88h80v80H40Zm96-16V56h32V72Zm-16,0H88V56h32Zm0,112v16H88V184Zm16,0h32v16H136Zm0-16V88h80v80Zm80-96H184V56h32ZM72,56V72H40V56ZM40,184H72v16H40Zm176,16H184V184h32v16Z"/></svg></span><span>Les images de cinéma&nbsp;: Marseille, Réouven, le Kotel, la salle</span></li>
+      <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48V96a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h28.69L182.06,73.37a79.56,79.56,0,0,0-56.13-23.43h-.45A79.52,79.52,0,0,0,69.59,72.71,8,8,0,0,1,58.41,61.27a96,96,0,0,1,135,.79L208,76.69V48a8,8,0,0,1,16,0ZM186.41,183.29a80,80,0,0,1-112.47-.66L59.31,168H88a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0V179.31l14.63,14.63A95.43,95.43,0,0,0,130,222.06h.53a95.36,95.36,0,0,0,67.07-27.33,8,8,0,0,0-11.18-11.44Z"/></svg></span><span>Deux allers-retours&nbsp;: vous regardez, vous me dites ce qu'on change</span></li>
+      <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></svg></span><span>Le film final, prêt à être envoyé sur WhatsApp</span></li>
+      <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg></span><span>Le site internet de l'événement, avec le tableau des réponses en direct</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <header class="sec">
+      <h2>le coût.</h2>
+    </header>
+    <div class="ledger">
+      <div class="row"><span class="k">Mon travail</span><span class="v">0&nbsp;€</span><p class="d">Offert.</p></div>
+      <div class="row"><span class="k">Les frais</span><span class="v">500&nbsp;€</span><p class="d">Ce que coûtent les outils qui fabriquent les images du film, et le site internet de l'événement. L'étape la plus coûteuse, c'est de reproduire tout le monde le plus fidèlement possible&nbsp;: chaque image est refaite plusieurs fois, jusqu'à garder la plus ressemblante.</p></div>
+      <div class="row total"><span class="k">Total</span><span class="v">500&nbsp;€</span></div>
+    </div>
+  </section>
+
+  <footer class="sign">
+    <span class="db" role="img" aria-label="DB Studio"><i></i></span>
+    <b>David Benittah</b>
+  </footer>
+</main>
+
+<script>
+(() => {
+  const DUR = 87.35;
+  const scenes = [...document.querySelectorAll(".scene")];
+  const island = document.getElementById("island");
+  const it = island.querySelector(".it"), name = island.querySelector(".in"), bar = island.querySelector(".bar");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let current = -1, timer = 0;
+
+  function setScene(k) {
+    if (k < 0 || k === current) return;
+    current = k;
+    for (let j = 0; j <= k; j++) scenes[j].classList.add("lit");
+    const s = scenes[k];
+    bar.style.transform = "scaleX(" + Math.min(1, parseFloat(s.dataset.e) / DUR) + ")";
+    const apply = () => {
+      it.textContent = s.dataset.t;
+      name.textContent = s.querySelector("h3").textContent;
+      name.classList.remove("swap");
+    };
+    if (reduce) { apply(); return; }
+    clearTimeout(timer);
+    name.classList.add("swap");
+    timer = setTimeout(apply, 170);
+  }
+
+  // rootMargin en % suit la largeur de l'écran : les bandes sont recalculées en px sur la hauteur
+  const inBand = new Set();
+  let watch = null, filmWatch = null, resizeTimer = 0;
+  function observe() {
+    if (watch) watch.disconnect();
+    if (filmWatch) filmWatch.disconnect();
+    inBand.clear();
+    const h = window.innerHeight;
+    const band = (top, bottom) => -Math.round(h * top) + "px 0px " + -Math.round(h * bottom) + "px 0px";
+    watch = new IntersectionObserver(entries => {
+      entries.forEach(e => { const k = scenes.indexOf(e.target); if (e.isIntersecting) inBand.add(k); else inBand.delete(k); });
+      if (inBand.size) setScene(Math.max(...inBand));
+    }, { rootMargin: band(.42, .42) });
+    scenes.forEach(s => watch.observe(s));
+    filmWatch = new IntersectionObserver(([e]) => {
+      island.classList.toggle("show", e.isIntersecting);
+    }, { rootMargin: band(.3, .55) });
+    filmWatch.observe(document.getElementById("film"));
+  }
+  observe();
+  window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(observe, 200); });
+})();
+</script>
+</body>
+</html>
