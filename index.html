@@ -67,14 +67,6 @@ h1 { margin: 0; font-weight: 700; font-size: clamp(46px, 13.5vw, 92px); line-hei
 .lm { display: block; overflow: hidden; padding: 0 .06em .1em; margin: 0 -.06em -.1em; }
 .lm > span { display: block; }
 .lede { margin: 0; font-weight: 700; font-size: 20px; letter-spacing: -.018em; color: var(--ink); }
-.cta { display: none; padding-top: 10px; }
-.open { display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px 0 22px; border: 0; border-radius: 999px; background: var(--ink); color: var(--white); font: 700 17px/1 var(--font); letter-spacing: -.015em; box-shadow: 0 16px 34px -18px rgba(154, 104, 30, .9); cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 160ms var(--ease-out), opacity 260ms ease; }
-.open svg { width: 20px; height: 20px; }
-.open:active { transform: scale(.97); }
-.open.gone { opacity: 0; transform: scale(.96); }
-html.gate, html.gate body { overflow: hidden; }
-html.gate .cta { display: block; }
-html.gate .sound { opacity: 0; pointer-events: none; }
 
 .sec { display: grid; gap: 10px; margin-bottom: 44px; }
 .sec h2 { margin: 0; font-weight: 700; font-size: clamp(44px, 12vw, 68px); line-height: .95; letter-spacing: -.055em; color: var(--ink); }
@@ -147,13 +139,11 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
   .hero .lm > span { animation: up .95s var(--ease-out) both; }
   .hero .lm:nth-child(1) > span { animation-delay: .8s; }
   .hero .lm:nth-child(2) > span { animation-delay: .9s; }
-  .hero .cta { animation: fade .8s var(--ease-out) 1.25s both; }
   .sound.on .eq i { animation: eq 820ms var(--ease-in-out) infinite alternate; }
   .sound.on .eq i:nth-child(2) { animation-delay: -540ms; }
   .sound.on .eq i:nth-child(3) { animation-delay: -270ms; }
   @keyframes trace { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
   @keyframes up { from { transform: translateY(108%); } }
-  @keyframes fade { from { opacity: 0; transform: translateY(8px); } }
 }
 @media (prefers-reduced-motion: reduce) {
   .sky span, .db i::before { animation: none; }
@@ -161,7 +151,6 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
 </style>
 </head>
 <body>
-<script>document.documentElement.classList.add("gate"); window.addEventListener("error", () => document.documentElement.classList.remove("gate"));</script>
 <div class="sky" aria-hidden="true"><span class="a"></span><span class="b"></span><span class="c"></span><span class="d"></span></div>
 
 <div class="island" id="island" aria-hidden="true">
@@ -180,7 +169,6 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
   <section class="hero">
     <span class="db" role="img" aria-label="DB Studio"><i></i></span>
     <h1><span class="lm"><span>le film</span></span><span class="lm"><span>de Réouven.</span></span></h1>
-    <div class="cta"><button class="open" id="open" type="button"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M212.92,17.69a8,8,0,0,0-6.86-1.45l-128,32A8,8,0,0,0,72,56V166.08A36,36,0,1,0,88,196V110.25l112-28v51.83A36,36,0,1,0,216,164V24A8,8,0,0,0,212.92,17.69ZM52,216a20,20,0,1,1,20-20A20,20,0,0,1,52,216ZM88,93.75V62.25l112-28v31.5ZM180,184a20,20,0,1,1,20-20A20,20,0,0,1,180,184Z"/></svg>Ouvrir le devis</button></div>
   </section>
 
   <section id="film">
@@ -351,13 +339,11 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
   window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(observe, 200); });
 })();
 
-// La page s'ouvre par « Ouvrir le devis » : un téléphone ne laisse partir le son qu'après un toucher, la musique part donc sur ce bouton ;
-// sur ordinateur, quand le navigateur la laisse partir seule, la page s'ouvre directement. Sur iPhone le volume ne se règle pas, le fondu y est sans effet
+// La musique part seule à l'ouverture quand le navigateur le permet ; sinon dès que le doigt se pose ou se lève, n'importe où sur la page :
+// un téléphone ne laisse partir le son qu'après un geste. Sur iPhone le volume ne se règle pas, le fondu y est sans effet
 (() => {
   const btn = document.getElementById("sound");
   const audio = document.getElementById("music");
-  const open = document.getElementById("open");
-  const root = document.documentElement;
   let started = false, raf = 0;
 
   function fadeTo(target, ms, done) {
@@ -382,26 +368,21 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
     audio.play().then(() => set(true), () => { started = false; set(false); });
     fadeTo(1, 900);
   }
-  function unlock(scroll) {
-    open.classList.add("gone");
-    setTimeout(() => {
-      root.classList.remove("gate");
-      if (scroll) document.getElementById("film").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
-    }, 260);
-  }
   function pause() {
     fadeTo(0, 400, () => audio.pause());
     set(false);
   }
-  // Safari sur iPhone n'envoie pas de clic quand on touche un simple texte : le doigt qui se lève compte aussi
-  const kick = e => { if (!started && !btn.contains(e.target) && !open.contains(e.target)) play(false); };
-  open.addEventListener("click", () => { play(true); unlock(true); });
+  // Safari sur iPhone n'envoie pas de clic quand on touche un simple texte : le doigt qui se lève compte aussi,
+  // et le doigt qui se pose, par où commence un glissement
+  const kick = e => { if (!started && !btn.contains(e.target)) play(false); };
   btn.addEventListener("click", () => (btn.classList.contains("on") ? pause() : play(true)));
+  document.addEventListener("touchstart", kick, { passive: true });
   document.addEventListener("touchend", kick);
   document.addEventListener("click", kick);
+  document.addEventListener("keydown", kick);
   // essai de départ seul à plein volume : à volume nul Safari le permet, puis coupe la musique quand le fondu la rend audible ; le fichier commence déjà en fondu
   started = true;
-  audio.play().then(() => { set(true); unlock(false); }, () => { started = false; });
+  audio.play().then(() => set(true), () => { started = false; });
 })();
 </script>
 </body>
