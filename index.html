@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Le film de Réouven">
-<meta property="og:description" content="Le devis du film et du site de l'événement.">
+<meta property="og:description" content="Le devis du film et du faire-part site internet.">
 <meta property="og:url" content="https://davidbenittah.github.io/devis-reouven/">
 <meta property="og:image" content="https://davidbenittah.github.io/devis-reouven/apercu.jpg">
 <meta property="og:image:width" content="1200">
@@ -67,6 +67,14 @@ h1 { margin: 0; font-weight: 700; font-size: clamp(46px, 13.5vw, 92px); line-hei
 .lm { display: block; overflow: hidden; padding: 0 .06em .1em; margin: 0 -.06em -.1em; }
 .lm > span { display: block; }
 .lede { margin: 0; font-weight: 700; font-size: 20px; letter-spacing: -.018em; color: var(--ink); }
+.cta { display: none; padding-top: 10px; }
+.open { display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px 0 22px; border: 0; border-radius: 999px; background: var(--ink); color: var(--white); font: 700 17px/1 var(--font); letter-spacing: -.015em; box-shadow: 0 16px 34px -18px rgba(154, 104, 30, .9); cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 160ms var(--ease-out), opacity 260ms ease; }
+.open svg { width: 20px; height: 20px; }
+.open:active { transform: scale(.97); }
+.open.gone { opacity: 0; transform: scale(.96); }
+html.gate, html.gate body { overflow: hidden; }
+html.gate .cta { display: block; }
+html.gate .sound { opacity: 0; pointer-events: none; }
 
 .sec { display: grid; gap: 10px; margin-bottom: 44px; }
 .sec h2 { margin: 0; font-weight: 700; font-size: clamp(44px, 12vw, 68px); line-height: .95; letter-spacing: -.055em; color: var(--ink); }
@@ -99,7 +107,7 @@ ol.scenes { list-style: none; margin: 0; padding: 0; display: grid; gap: 64px; }
 .island .in.swap { opacity: 0; filter: blur(4px); transform: translateY(5px); }
 .island .bar { position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform 700ms var(--ease-out); }
 
-.sound { position: fixed; z-index: 5; right: 16px; bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); display: flex; align-items: center; gap: 9px; height: 44px; padding: 0 16px 0 14px; border-radius: 999px; border: 1px solid var(--glass-edge); background: var(--glass-strong); color: var(--ink); font: 700 14px/1 var(--font); letter-spacing: -.01em; box-shadow: 0 18px 40px -24px rgba(60, 40, 10, .5); -webkit-backdrop-filter: blur(18px) saturate(1.5); backdrop-filter: blur(18px) saturate(1.5); cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 160ms var(--ease-out); }
+.sound { position: fixed; z-index: 5; right: 16px; bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); display: flex; align-items: center; gap: 9px; height: 44px; padding: 0 16px 0 14px; border-radius: 999px; border: 1px solid var(--glass-edge); background: var(--glass-strong); color: var(--ink); font: 700 14px/1 var(--font); letter-spacing: -.01em; box-shadow: 0 18px 40px -24px rgba(60, 40, 10, .5); -webkit-backdrop-filter: blur(18px) saturate(1.5); backdrop-filter: blur(18px) saturate(1.5); cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 160ms var(--ease-out), opacity 400ms ease; }
 .sound:active { transform: scale(.96); }
 .eq { display: flex; align-items: flex-end; gap: 2px; height: 14px; }
 .eq i { width: 3px; height: 4px; border-radius: 2px; background: currentColor; transition: height 300ms var(--ease-out); }
@@ -139,7 +147,7 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
   .hero .lm > span { animation: up .95s var(--ease-out) both; }
   .hero .lm:nth-child(1) > span { animation-delay: .8s; }
   .hero .lm:nth-child(2) > span { animation-delay: .9s; }
-  .hero .lede { animation: fade .8s var(--ease-out) 1.25s both; }
+  .hero .cta { animation: fade .8s var(--ease-out) 1.25s both; }
   .sound.on .eq i { animation: eq 820ms var(--ease-in-out) infinite alternate; }
   .sound.on .eq i:nth-child(2) { animation-delay: -540ms; }
   .sound.on .eq i:nth-child(3) { animation-delay: -270ms; }
@@ -153,6 +161,7 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add("gate"); window.addEventListener("error", () => document.documentElement.classList.remove("gate"));</script>
 <div class="sky" aria-hidden="true"><span class="a"></span><span class="b"></span><span class="c"></span><span class="d"></span></div>
 
 <div class="island" id="island" aria-hidden="true">
@@ -171,6 +180,7 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
   <section class="hero">
     <span class="db" role="img" aria-label="DB Studio"><i></i></span>
     <h1><span class="lm"><span>le film</span></span><span class="lm"><span>de Réouven.</span></span></h1>
+    <div class="cta"><button class="open" id="open" type="button"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M212.92,17.69a8,8,0,0,0-6.86-1.45l-128,32A8,8,0,0,0,72,56V166.08A36,36,0,1,0,88,196V110.25l112-28v51.83A36,36,0,1,0,216,164V24A8,8,0,0,0,212.92,17.69ZM52,216a20,20,0,1,1,20-20A20,20,0,0,1,52,216ZM88,93.75V62.25l112-28v31.5ZM180,184a20,20,0,1,1,20-20A20,20,0,0,1,180,184Z"/></svg>Ouvrir le devis</button></div>
   </section>
 
   <section id="film">
@@ -270,7 +280,7 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
       <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM40,88h80v80H40Zm96-16V56h32V72Zm-16,0H88V56h32Zm0,112v16H88V184Zm16,0h32v16H136Zm0-16V88h80v80Zm80-96H184V56h32ZM72,56V72H40V56ZM40,184H72v16H40Zm176,16H184V184h32v16Z"/></svg></span><span>Les images de cinéma&nbsp;: Marseille, Réouven, le Kotel, la salle</span></li>
       <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48V96a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h28.69L182.06,73.37a79.56,79.56,0,0,0-56.13-23.43h-.45A79.52,79.52,0,0,0,69.59,72.71,8,8,0,0,1,58.41,61.27a96,96,0,0,1,135,.79L208,76.69V48a8,8,0,0,1,16,0ZM186.41,183.29a80,80,0,0,1-112.47-.66L59.31,168H88a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0V179.31l14.63,14.63A95.43,95.43,0,0,0,130,222.06h.53a95.36,95.36,0,0,0,67.07-27.33,8,8,0,0,0-11.18-11.44Z"/></svg></span><span>Deux allers-retours&nbsp;: vous regardez, vous me dites ce qu'on change</span></li>
       <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></svg></span><span>Le film final, prêt à être envoyé sur WhatsApp</span></li>
-      <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg></span><span>Le site internet de l'événement, avec le tableau des réponses en direct</span></li>
+      <li><span class="ic"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg></span><span>Le faire-part site internet, avec le tableau des réponses en direct</span></li>
     </ul>
   </section>
 
@@ -281,7 +291,7 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
     <div class="ledger">
       <div class="row"><span class="k">Mon travail</span><span class="v">0&nbsp;€</span><p class="d">Offert.</p></div>
       <div class="row"><span class="k">Le film</span><span class="v">300&nbsp;€</span><p class="d">Ce que coûtent les outils qui fabriquent les images du film. L'étape la plus coûteuse, c'est de reproduire tout le monde le plus fidèlement possible&nbsp;: chaque image est refaite plusieurs fois, jusqu'à garder la plus ressemblante.</p></div>
-      <div class="row"><span class="k">Le site internet</span><span class="v">200&nbsp;€</span></div>
+      <div class="row"><span class="k">Le faire-part site internet</span><span class="v">200&nbsp;€</span></div>
       <div class="row total"><span class="k">Total</span><span class="v">500&nbsp;€</span></div>
     </div>
   </section>
@@ -341,10 +351,13 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
   window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(observe, 200); });
 })();
 
-// La musique de fond démarre au premier toucher sur la page, le bouton la coupe et la relance ; sur iPhone le volume ne se règle pas, le fondu y est sans effet
+// La page s'ouvre par « Ouvrir le devis » : un téléphone ne laisse partir le son qu'après un toucher, la musique part donc sur ce bouton ;
+// sur ordinateur, quand le navigateur la laisse partir seule, la page s'ouvre directement. Sur iPhone le volume ne se règle pas, le fondu y est sans effet
 (() => {
   const btn = document.getElementById("sound");
   const audio = document.getElementById("music");
+  const open = document.getElementById("open");
+  const root = document.documentElement;
   let started = false, raf = 0;
 
   function fadeTo(target, ms, done) {
@@ -369,15 +382,26 @@ ul.inclus { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
     audio.play().then(() => set(true), () => { started = false; set(false); });
     fadeTo(1, 900);
   }
+  function unlock(scroll) {
+    open.classList.add("gone");
+    setTimeout(() => {
+      root.classList.remove("gate");
+      if (scroll) document.getElementById("film").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    }, 260);
+  }
   function pause() {
     fadeTo(0, 400, () => audio.pause());
     set(false);
   }
   // Safari sur iPhone n'envoie pas de clic quand on touche un simple texte : le doigt qui se lève compte aussi
-  const kick = e => { if (!started && !btn.contains(e.target)) play(false); };
+  const kick = e => { if (!started && !btn.contains(e.target) && !open.contains(e.target)) play(false); };
+  open.addEventListener("click", () => { play(true); unlock(true); });
   btn.addEventListener("click", () => (btn.classList.contains("on") ? pause() : play(true)));
   document.addEventListener("touchend", kick);
   document.addEventListener("click", kick);
+  // essai de départ seul à plein volume : à volume nul Safari le permet, puis coupe la musique quand le fondu la rend audible ; le fichier commence déjà en fondu
+  started = true;
+  audio.play().then(() => { set(true); unlock(false); }, () => { started = false; });
 })();
 </script>
 </body>
